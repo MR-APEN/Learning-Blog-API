@@ -10,10 +10,6 @@ const publicationSchema = new Schema({
         type: String,
         required: true
     },
-    dateCreated: {
-        type: Date,
-        default: Date.now
-    },
     course: {
         type: Schema.Types.ObjectId,
         ref: "Course",
@@ -23,6 +19,11 @@ const publicationSchema = new Schema({
         type: Boolean,
         default: true
     }
-})
+},
+{
+    timestamps: true,
+    versionKey: false
+}
+)
 
 export default model("Publication", publicationSchema)

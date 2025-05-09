@@ -1,4 +1,6 @@
 import Publication from "./publication.model.js"
+import Course from "../course/course.model.js"
+import publicationModel from "./publication.model.js"
 
 export const createPublication = async (req, res) => {
     const data = req.body
@@ -35,6 +37,91 @@ export const getPublications = async (req, res) => {
             message: "Publications retrieved successfully",
             publications: publications
         })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
+
+export const getPublicationsByDateRecent = async (req, res) => {
+    try {
+        const publications = await Publication.find({status:true}).populate("course", "teacher").populate("course","name").sort({ createdAt: -1 })
+
+        if (!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No publications found"
+            })
+        }
+        
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
+
+export const getPublicationsOld = async (req, res) => {
+    try {
+        const publications = await Publication.find({status:true}).populate("course", "teacher").populate("course","name").sort({ createdAt: 1 })
+        if (!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No publications found"
+            })
+        }
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
+
+export const getPublicationsByCourse = async (req, res) => {
+    const { name } = req.body
+    try {
+        const courses = await Course.find({ name })
+
+        if (!courses || courses.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No courses found with the provided name"
+            })
+        }
+
+        const courseIds = courses.map(course => course._id)
+        const publications = await Publication.find({ status: true, course: { $in: courseIds } }).populate("course", "teacher name")
+
+        if (!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No publications found for the provided course name"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+
     } catch (error) {
         return res.status(500).json({
             success: false,
