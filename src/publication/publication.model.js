@@ -18,6 +18,10 @@ const publicationSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Course",
         required: true
+    },
+    status: {
+        type: Boolean,
+        default: true
     }
 })
 

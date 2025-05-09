@@ -20,3 +20,11 @@ export const updatePublicationValidator = [
     validateField,
     handleErrors
 ]
+
+export const deletePublicationValidator = [
+    param("id", "Id is required").notEmpty(),
+    param("id", "Id must be a valid ObjectId").isMongoId(),
+    param("id").custom(validatePublicationId),
+    validateField,
+    handleErrors
+]
