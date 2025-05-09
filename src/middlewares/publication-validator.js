@@ -28,3 +28,9 @@ export const deletePublicationValidator = [
     validateField,
     handleErrors
 ]
+
+export const getPublicationsByCourseValidator = [
+    body("name", "Name course is required").notEmpty(),
+    validateField,
+    handleErrors
+]

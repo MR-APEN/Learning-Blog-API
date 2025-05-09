@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { createPublication, getPublications, updatePublication, deletePublication, getPublicationsByDateRecent, getPublicationsOld } from "./publication.controller.js"
-import { createPublicationValidator, updatePublicationValidator, deletePublicationValidator } from "../middlewares/publication-validator.js"
+import { createPublication, getPublications, updatePublication, deletePublication, getPublicationsByDateRecent, getPublicationsOld, getPublicationsByCourse } from "./publication.controller.js"
+import { createPublicationValidator, updatePublicationValidator, deletePublicationValidator, getPublicationsByCourseValidator } from "../middlewares/publication-validator.js"
 
 const router = Router()
 
@@ -10,5 +10,6 @@ router.put("/update/:id", updatePublicationValidator, updatePublication)
 router.delete("/delete/:id", deletePublicationValidator, deletePublication)
 router.get("/recent", getPublicationsByDateRecent)
 router.get("/old", getPublicationsOld)
+router.get("/course", getPublicationsByCourseValidator, getPublicationsByCourse)
 
 export default router
