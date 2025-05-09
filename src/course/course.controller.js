@@ -2,26 +2,26 @@ import Course from "./course.model.js"
 
 export const createCourse = async () => {
     const taller = {
-        "title": "Taller III",
+        "name": "Taller III",
         "description": "El curso de Taller III pretende implementar proyectos y actividades que enfoquen al alumno a un ambiente práctico de la programación",
         "teacher": "Braulio Echeverria",
     }
 
     const tecnologia = {
-        "title": "Tecnología III",
+        "name": "Tecnología III",
         "description": "El curso de Tecnología III pretende llevarlo por la teoría de cada tema a aplicar durante la clase de taller",
         "teacher": "Braulio Echeverria",
     }
 
     const practica = {
-        "title": "Practica Supervisada",
+        "name": "Practica Supervisada",
         "description": "El curso de Práctica supervisada pretende conjutar las areas de Taller III y Tecnología III, dándole un enfoque más externo, y acercando a la realidad de la industria de la tecnología",
         "teacher": "Braulio Echeverria",
     }
 
-    const courseTaller = await Course.findOne({ title: taller.title })
-    const courseTecnologia = await Course.findOne({ title: tecnologia.title })
-    const coursePractica = await Course.findOne({ title: practica.title })
+    const courseTaller = await Course.findOne({ name: taller.name })
+    const courseTecnologia = await Course.findOne({ name: tecnologia.name })
+    const coursePractica = await Course.findOne({ name: practica.name })
 
     if(!courseTaller) {
         await Course.create(taller)

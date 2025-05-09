@@ -18,3 +18,21 @@ export const createPublication = async (req, res) => {
         })
     }
 }
+
+export const getPublications = async (req, res) => {
+    try {
+        const publications = await Publication.find().populate("course", "teacher").populate("course","name")
+
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
