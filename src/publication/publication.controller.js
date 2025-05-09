@@ -44,6 +44,54 @@ export const getPublications = async (req, res) => {
     }
 }
 
+export const getPublicationsByDateRecent = async (req, res) => {
+    try {
+        const publications = await Publication.find({status:true}).populate("course", "teacher").populate("course","name").sort({ createdAt: -1 })
+
+        if (!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No publications found"
+            })
+        }
+        
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
+
+export const getPublicationsOld = async (req, res) => {
+    try {
+        const publications = await Publication.find({status:true}).populate("course", "teacher").populate("course","name").sort({ createdAt: 1 })
+        if (!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No publications found"
+            })
+        }
+        return res.status(200).json({
+            success: true,
+            message: "Publications retrieved successfully",
+            publications: publications
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting publications",
+            error: error.message
+        })
+    }
+}
+
 export const updatePublication = async (req, res) => {
     const { id } = req.params
     const data = req.body
