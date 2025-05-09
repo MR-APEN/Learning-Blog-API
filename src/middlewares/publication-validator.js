@@ -1,5 +1,5 @@
-import { body } from "express-validator"
-import { validatePublication } from "../helpers/db-validator.js"
+import { body, param } from "express-validator"
+import { validatePublication, validatePublicationId } from "../helpers/db-validator.js"
 import { validateField } from "./field-validator.js"
 import { handleErrors } from "./handle-errors.js"
 
@@ -9,6 +9,14 @@ export const createPublicationValidator = [
     body("description", "Description is required").notEmpty(),
     body("course", "Course is required").notEmpty(),
     body("course", "Course must be a valid ObjectId").isMongoId(),
+    validateField,
+    handleErrors
+]
+
+export const updatePublicationValidator = [
+    param("id", "Id is required").notEmpty(),
+    param("id", "Id must be a valid ObjectId").isMongoId(),
+    param("id").custom(validatePublicationId),
     validateField,
     handleErrors
 ]

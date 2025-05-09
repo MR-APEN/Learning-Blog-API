@@ -6,3 +6,10 @@ export const validatePublication = async (title= "") => {
         throw new Error(`Publication with title ${title} already exists`)
     }
 }
+
+export const validatePublicationId = async (id= "") => {
+    const exist = await Publication.findById(id)
+    if(!exist) {
+        throw new Error(`Publication with id ${id} does not exist`)
+    }
+}

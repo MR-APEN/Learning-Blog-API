@@ -36,3 +36,24 @@ export const getPublications = async (req, res) => {
         })
     }
 }
+
+export const updatePublication = async (req, res) => {
+    const { id } = req.params
+    const data = req.body
+    try {
+        const publication = await Publication.findByIdAndUpdate(id, data, { new: true })
+        
+        return res.status(200).json({
+            success: true,
+            message: "Publication updated successfully",
+            publication: publication
+        })
+    }
+    catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error updating publication",
+            error: error.message
+        })
+    }
+}
