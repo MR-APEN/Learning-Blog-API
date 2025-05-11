@@ -10,6 +10,6 @@ router.put("/update/:id", updatePublicationValidator, updatePublication)
 router.delete("/delete/:id", deletePublicationValidator, deletePublication)
 router.get("/recent", getPublicationsByDateRecent)
 router.get("/old", getPublicationsOld)
-router.get("/course", getPublicationsByCourseValidator, getPublicationsByCourse)
+router.get("/course/:name", getPublicationsByCourseValidator, getPublicationsByCourse)
 
 export default router
