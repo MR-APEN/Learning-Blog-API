@@ -19,3 +19,20 @@ export const addComment = async (req, res) => {
         })
     }
 }
+
+export const getCommentsByPublication = async (req, res) => {
+    const { postId } = req.params
+    try {
+        const comments = await Comment.find({ postId }).sort({ date: -1 })
+        return res.status(200).json({
+            success: true,
+            comments
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error getting comments",
+            error: error.message
+        })
+    }
+}
