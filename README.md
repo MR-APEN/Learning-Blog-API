@@ -10,6 +10,11 @@ API RESTful para la gestión de publicaciones y comentarios de un blog de aprend
 - Documentación interactiva con Swagger
 - Seguridad con Helmet y CORS
 
+## Swagger DOc
+Ruta para acceder a la documentación swaggert
+    ```bash
+    http://127.0.0.1:3030/api-doc
+
 ## Instalación
 
 1. **Clona el repositorio:**
