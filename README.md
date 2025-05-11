@@ -22,30 +22,33 @@ API RESTful para la gestión de publicaciones y comentarios de un blog de aprend
     npm i
 
 3. **Configura las variables de entorno**
+    ```bash
    PORT=3030
    MONGO_URI=mongodb://localhost:27017/learning-blog
 
 4. **Inicia el servidor**
+    ```bash
    npm run dev
 
 
 **Estructura del proyecto**
-configs/
-  documentation.js
-  mongo.js
-  server.js
-src/
-  comment/
+
+    configs/
+    documentation.js
+    mongo.js
+    server.js
+    src/
+    comment/
     comment.controller.js
     comment.routes.js
-  publication/
+    publication/
     publication.controller.js
     publication.routes.js
-  middlewares/
+    middlewares/
     comment-validator.js
     publication-validator.js
     request-validator.js
 
-*Autor*
+## Autor
 Javier Alejandro Apen Solis
 Alias: MR-APEN
