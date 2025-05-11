@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "a30dbb6e-78fd-42bb-a9ba-85d994849da4",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37585551"
+	},
+	"item": [
+		{
+			"name": "Publication",
+			"item": [
+				{
+					"name": "Add publication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Gestor de Hoteles\",\r\n    \"description\": \"Una página web que pueda realizar reservaciones y visualizaciones de un gestor de Hoteles\",\r\n    \"course\": \"681da4ab1e975d257d541be3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3030/blog/v1/publication/add"
+					},
+					"response": []
+				},
+				{
+					"name": "All publications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"API System Adoption\",\r\n    \"description\": \"Desarrollar una APi que simule un sistema de adopción de mascotas\",\r\n    \"course\": \"681b898399e40f78940ade90\"\r\n}"
+						},
+						"url": "http://127.0.0.1:3030/blog/v1/publication/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Publication",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"API-Rest System Adoption\",\r\n    \"description\": \"Desarrollar una API que simule un sistema de adopción de mascotas\",\r\n    \"course\": \"681b898399e40f78940ade90\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3030/blog/v1/publication/update/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3030",
+							"path": [
+								"blog",
+								"v1",
+								"publication",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "681d804222dc840a084d1921"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Publication",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"API-Rest System Adoption\",\r\n    \"description\": \"Desarrollar una API que simule un sistema de adopción de mascotas\",\r\n    \"course\": \"681b898399e40f78940ade90\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3030/blog/v1/publication/delete/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3030",
+							"path": [
+								"blog",
+								"v1",
+								"publication",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "681d804222dc840a084d1921"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recent Publication",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"API System Adoption\",\r\n    \"description\": \"Desarrollar una APi que simule un sistema de adopción de mascotas\",\r\n    \"course\": \"681b898399e40f78940ade90\"\r\n}"
+						},
+						"url": "http://127.0.0.1:3030/blog/v1/publication/recent"
+					},
+					"response": []
+				},
+				{
+					"name": "Old Publication",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:3030/blog/v1/publication/old"
+					},
+					"response": []
+				},
+				{
+					"name": "Course publications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3030/blog/v1/publication/course/:name",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3030",
+							"path": [
+								"blog",
+								"v1",
+								"publication",
+								"course",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "Taller III"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Add Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"681d804222dc840a084d1921\",\r\n    \"name\": \"Javier Apen\",\r\n    \"content\": \"Taller bueno para practicar logica en HTTP y NODEJS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3030/blog/v1/comment/add"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

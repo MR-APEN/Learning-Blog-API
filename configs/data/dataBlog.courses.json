@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "681da4ab1e975d257d541be3"
+  },
+  "name": "Taller III",
+  "description": "El curso de Taller III pretende implementar proyectos y actividades que enfoquen al alumno a un ambiente práctico de la programación",
+  "teacher": "Braulio Echeverria",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T06:46:03.343Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:46:03.343Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681da4ab1e975d257d541be7"
+  },
+  "name": "Tecnología III",
+  "description": "El curso de Tecnología III pretende llevarlo por la teoría de cada tema a aplicar durante la clase de taller",
+  "teacher": "Braulio Echeverria",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T06:46:03.377Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:46:03.377Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681da4ab1e975d257d541be9"
+  },
+  "name": "Practica Supervisada",
+  "description": "El curso de Práctica supervisada pretende conjutar las areas de Taller III y Tecnología III, dándole un enfoque más externo, y acercando a la realidad de la industria de la tecnología",
+  "teacher": "Braulio Echeverria",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T06:46:03.379Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:46:03.379Z"
+  }
+}]

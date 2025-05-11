@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "681da4d71e975d257d541bec"
+  },
+  "title": "API System Adoption",
+  "description": "Desarrollar una APi que simule un sistema de adopción de mascotas",
+  "course": {
+    "$oid": "681da4ab1e975d257d541be3"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-05T06:46:47.289Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:46:47.289Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681da5961e975d257d541bef"
+  },
+  "title": "Desarrollo Web",
+  "description": "Infografia que se explica y mecionan puntos claves del desarrollo web",
+  "course": {
+    "$oid": "681da4ab1e975d257d541be7"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-08T06:49:58.902Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:49:58.902Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681da5e61e975d257d541bf2"
+  },
+  "title": "Almacenadora",
+  "description": "Realizar una API para gestionar una Almacenadora y página con React para interactuar con la API",
+  "course": {
+    "$oid": "681da4ab1e975d257d541be9"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-10T06:51:18.143Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T06:51:18.143Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "682087ddf82e49beaa91cd01"
+  },
+  "title": "Exposición Proyectos",
+  "description": "Exposición presentando proyectos que se realizaran en grupos para el NIM 3",
+  "course": {
+    "$oid": "681da4ab1e975d257d541be9"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-11T11:19:57.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-11T11:19:57.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68209959a707b0fbf628a0ae"
+  },
+  "title": "Gestor de Hoteles",
+  "description": "Una página web que pueda realizar reservaciones y visualizaciones de un gestor de Hoteles",
+  "course": {
+    "$oid": "681da4ab1e975d257d541be3"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-11T12:34:33.741Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-11T12:34:33.741Z"
+  }
+}]
