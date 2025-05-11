@@ -95,7 +95,7 @@ export const getPublicationsOld = async (req, res) => {
 }
 
 export const getPublicationsByCourse = async (req, res) => {
-    const { name } = req.body
+    const { name } = req.params
     try {
         const courses = await Course.find({ name })
 
