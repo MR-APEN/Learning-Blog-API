@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "68208e698e8a586bf722917a"
+  },
+  "postId": {
+    "$oid": "681da4d71e975d257d541bec"
+  },
+  "name": "Javier",
+  "content": "Algo complicado pero buen ejercicio",
+  "date": {
+    "$date": "2025-05-11T11:47:53.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68208ee682f6ef5b33a54918"
+  },
+  "postId": {
+    "$oid": "681da4d71e975d257d541bec"
+  },
+  "name": "Juan",
+  "content": "Malo malo",
+  "date": {
+    "$date": "2025-05-11T11:49:58.664Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6820966c82f6ef5b33a54965"
+  },
+  "postId": {
+    "$oid": "681da5961e975d257d541bef"
+  },
+  "name": "Gabriel",
+  "content": "Fácil pero esencial para aprender",
+  "date": {
+    "$date": "2025-05-11T12:22:04.141Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68209cd7dfe66b480bb57fbf"
+  },
+  "postId": {
+    "$oid": "68209959a707b0fbf628a0ae"
+  },
+  "name": "David",
+  "content": "Complicado para trabajar en equipos",
+  "date": {
+    "$date": "2025-05-11T12:49:27.098Z"
+  },
+  "__v": 0
+}]
