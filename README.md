@@ -11,9 +11,7 @@ API RESTful para la gestión de publicaciones y comentarios de un blog de aprend
 - Seguridad con Helmet y CORS
 
 ## Swagger DOc
-Ruta para acceder a la documentación swaggert
-    ```bash
-    http://127.0.0.1:3030/api-doc
+Ruta para acceder a la documentación swagger http://127.0.0.1:3030/api-doc
 
 ## Instalación
 
@@ -29,7 +27,7 @@ Ruta para acceder a la documentación swaggert
 3. **Configura las variables de entorno**
     ```bash
    PORT=3030
-   MONGO_URI=mongodb://localhost:27017/learning-blog
+   MONGO_URI=mongodb://localhost:27017/dataBlog
 
 4. **Inicia el servidor**
     ```bash
